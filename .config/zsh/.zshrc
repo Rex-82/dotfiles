@@ -21,7 +21,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 source $HOME/pathos.sh
 
 # Add exports
-[ -f  "$HOME/.config/zsh/.zsh_exports" ] && source "$HOME/.config/zsh/.zsh_exports"
+[ -f  "${XDG_CONFIG_HOME}/zsh/.zsh_exports" ] && source "${XDG_CONFIG_HOME}/zsh/.zsh_exports"
 
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
@@ -58,7 +58,7 @@ bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory

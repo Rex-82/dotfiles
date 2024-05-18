@@ -1,0 +1,27 @@
+# Better listing
+alias ls='ls --color=auto'
+alias l='ls --color=auto -lAh'
+
+# Grep colors
+alias grep='grep --color=auto'
+
+# List only mounted drives
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | grep -E ^/dev/ | sort"
+
+# Find a command in history
+alias gh="history | grep"
+
+# nvim shorthand
+alias vim='nvim'
+
+# Enable sudo aliases
+alias sudo='sudo '
+
+# Edit config alias
+alias zshconfig='nvim ~/.config/zsh/.zshrc'
+
+# Source configs
+alias zshso='source ~/.config/zsh/.zshrc'
+
+# Set nvidia alias until they comply with XDG
+alias nvidia-settings='nvidia-settings --config=~/.config/nvidia/settings'

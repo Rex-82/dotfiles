@@ -17,8 +17,14 @@ alias vim='nvim'
 # Enable sudo aliases
 alias sudo='sudo '
 
-# Edit config alias
+# Edit zsh config
 alias zshconfig='nvim ~/.config/zsh/.zshrc'
+
+# Edit zsh aliases
+alias zshalias='nvim ~/.config/zsh/.zsh_aliases'
+
+# Edit zsh exports
+alias zshexport='nvim ~/.config/zsh/.zsh_exports'
 
 # Source configs
 alias zshso='source ~/.config/zsh/.zshrc'

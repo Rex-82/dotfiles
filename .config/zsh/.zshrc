@@ -38,6 +38,7 @@ zinit snippet OMZP::nvm
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::aws
+# zinit snippet OMZP::keychain
 # zinit snippet OMZP::kubectl
 # zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
@@ -51,10 +52,10 @@ zinit cdreplay -q
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -v
+# bindkey -v
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
-bindkey '^[w' kill-region
+# bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000

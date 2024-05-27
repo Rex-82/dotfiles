@@ -12,19 +12,21 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | gr
 alias gh="history | grep"
 
 # nvim shorthand
-alias vim='nvim'
+alias v='neovide --fork'
+alias vim='neovide --fork'
+
 
 # Enable sudo aliases
 alias sudo='sudo '
 
 # Edit zsh config
-alias zshconfig='nvim ~/.config/zsh/.zshrc'
+alias zshconfig='neovide ~/.config/zsh/.zshrc'
 
 # Edit zsh aliases
-alias zshalias='nvim ~/.config/zsh/.zsh_aliases'
+alias zshalias='neovide ~/.config/zsh/.zsh_aliases'
 
 # Edit zsh exports
-alias zshexport='nvim ~/.config/zsh/.zsh_exports'
+alias zshexport='neovide ~/.config/zsh/.zsh_exports'
 
 # Source configs
 alias zshso='source ~/.config/zsh/.zshrc'

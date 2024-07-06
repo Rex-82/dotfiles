@@ -20,16 +20,22 @@ alias vim='neovide --fork'
 alias sudo='sudo '
 
 # Edit zsh config
-alias zshconfig='neovide ~/.config/zsh/.zshrc'
+alias zshconfig='v ~/.config/zsh/.zshrc'
 
 # Edit zsh aliases
-alias zshalias='neovide ~/.config/zsh/.zsh_aliases'
+alias zshalias='v ~/.config/zsh/.zsh_aliases'
 
 # Edit zsh exports
-alias zshexport='neovide ~/.config/zsh/.zsh_exports'
+alias zshexport='v ~/.config/zsh/.zsh_exports'
 
 # Source configs
 alias zshso='source ~/.config/zsh/.zshrc'
 
 # Set nvidia alias until they comply with XDG
 alias nvidia-settings='nvidia-settings --config=~/.config/nvidia/settings'
+
+# Safe rm command
+alias 'rm'='rmtrash'
+alias 'rm -rf'='rmtrash'
+alias 'rm -dr'='rmdirtrash'
+alias 'rm dir'='rmdirtrash'

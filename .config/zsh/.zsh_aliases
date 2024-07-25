@@ -15,7 +15,6 @@ alias gh="history | grep"
 alias v='neovide --fork'
 alias vim='neovide --fork'
 
-
 # Enable sudo aliases
 alias sudo='sudo '
 
@@ -39,3 +38,58 @@ alias 'rm'='rmtrash'
 alias 'rm -rf'='rmtrash'
 alias 'rm -dr'='rmdirtrash'
 alias 'rm dir'='rmdirtrash'
+
+
+alias 'll'='join -1 2 -2 9  <((du -sh * ; (du -sh .*) 2>/dev/null) | sort -k2) <(l | sort -k9) | awk  '"'"'
+BEGIN {
+    # Define colors
+    COLOR_SIZE="\033[2;33m"
+    COLOR_FILENAME="\033[1;34m"
+    COLOR_FILENAME_EXEC="\033[1;32m"
+    COLOR_FILENAME_ALL_PERM="\033[1;31m"
+    COLOR_PERMS="\033[34m"
+    COLOR_RESET="\033[0m"
+    COLOR_DIR="\033[1;34m"
+    COLOR_DIR_ALL_PERM="\033[1;30;41m"
+}
+{
+    # Print permissions
+    printf("%s%-10s%s ", COLOR_PERMS, $3, COLOR_RESET)
+
+    # Print hard links numbers
+    printf("%3s ", $4)
+
+    # Print owners name
+    printf("%s:", $5)
+    # Print groups name
+    printf("%s ", $6)
+
+    # Print sizes
+    printf("%s%4s%s ", COLOR_SIZE, $2, COLOR_RESET)
+
+    # Print days
+    printf("%s ", $8)
+    # Print months
+    printf("%s ", $9)
+    # Print hours
+    printf("%s ", $10)
+
+    # Print files
+    if ($3 ~ /^d/ && $3 ~ /rwxrwxrwx/) {
+        # Directories with 777 perm
+        printf("%s%-10s%s ", COLOR_DIR_ALL_PERM, $1, COLOR_RESET)
+    } else if ($3 ~ /^d/) {
+        # Directories
+        printf("%s%-10s%s ", COLOR_DIR, $1, COLOR_RESET)
+    } else if ($3 ~ /-rwxrwxrwx/) {
+        # Executable files with 777 perm
+        printf("%s%-10s%s ", COLOR_FILENAME_ALL_PERM, $1, COLOR_RESET)
+    } else if ($3 ~ /x/) {
+        # Executable files
+        printf("%s%-10s%s ", COLOR_FILENAME_EXEC, $1, COLOR_RESET)
+    } else {
+        # Regular files
+        printf("%s ", $1)
+    }
+    print ""
+}'"'"' | column -t -s ""'

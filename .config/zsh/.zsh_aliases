@@ -39,7 +39,7 @@ alias 'rm -rf'='rmtrash'
 alias 'rm -dr'='rmdirtrash'
 alias 'rm dir'='rmdirtrash'
 
-
+# Listing with correct sizes
 alias 'll'='join -1 2 -2 9  <((du -sh * ; (du -sh .*) 2>/dev/null) | sort -k2) <(l | sort -k9) | awk  '"'"'
 BEGIN {
     # Define colors

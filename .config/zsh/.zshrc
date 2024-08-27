@@ -20,7 +20,9 @@ source $HOME/pathos.sh
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
+# zinit light Aloxaf/fzf-tab
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
 
 # Add in better Vi-mode
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode

@@ -51,7 +51,7 @@ bindkey '^j' history-search-forward
 # bindkey '^[w' kill-region
 
 # History
-HISTSIZE=5000
+HISTSIZE=50000
 HISTFILE=$XDG_CONFIG_HOME/zsh/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase

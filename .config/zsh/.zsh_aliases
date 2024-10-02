@@ -8,9 +8,6 @@ alias grep='grep --color=auto'
 # List only mounted drives
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | grep -E ^/dev/ | sort"
 
-# Find a command in history
-alias gh="history | grep"
-
 # nvim shorthand
 alias v='neovide --fork'
 alias vim='neovide --fork'
@@ -27,6 +24,9 @@ alias zshalias='v ~/.config/zsh/.zsh_aliases'
 # Edit zsh exports
 alias zshexport='v ~/.config/zsh/.zsh_exports'
 
+# zsh startup time profiling
+alias zshprof='time ZSH_DEBUGRC=1 zsh -i -c exit'
+
 # Source configs
 alias zshso='source ~/.config/zsh/.zshrc'
 
@@ -42,3 +42,12 @@ alias 'rm dir'='rmdirtrash'
 # lazygit shortcut
 alias lg='lazygit'
 
+# quit alias
+alias :q='exit'
+
+# clear screen alias
+alias cl='clear'
+
+# Github Copilot CLI shorthand
+alias explain='gh copilot explain'
+alias suggest='gh copilot suggest'

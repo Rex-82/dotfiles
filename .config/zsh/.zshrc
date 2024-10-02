@@ -43,7 +43,7 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 
 # Load completions
-autoload -Uz compinit && compinit
+autoload -Uz compinit && (compinit &)
 
 zinit cdreplay -q
 

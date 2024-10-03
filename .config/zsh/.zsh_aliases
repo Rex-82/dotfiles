@@ -1,6 +1,6 @@
 # Better listing
 alias l='eza -alg --group-directories-first'
-alias ll='eza -balg --group-directories-first --total-size'
+alias ll='eza -balgo --group-directories-first --total-size'
 
 # Grep colors
 alias grep='grep --color=auto'

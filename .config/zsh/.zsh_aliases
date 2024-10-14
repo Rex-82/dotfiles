@@ -51,3 +51,7 @@ alias cl='clear'
 # Github Copilot CLI shorthand
 alias explain='gh copilot explain'
 alias suggest='gh copilot suggest'
+
+# pnpm
+alias pn='pnpm'
+alias pnr='pnpm run'

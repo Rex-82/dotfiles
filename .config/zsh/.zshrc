@@ -52,8 +52,8 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
 # Keybindings
 # bindkey -v
-bindkey '^k' history-search-backward
-bindkey '^j' history-search-forward
+bindkey '^[^k' history-search-backward
+bindkey '^[^j' history-search-forward
 bindkey '^[^l' autosuggest-accept
 # bindkey '^[w' kill-region
 

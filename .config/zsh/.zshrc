@@ -27,6 +27,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit ice lucid wait'0'
 zinit light joshskidmore/zsh-fzf-history-search
+zinit ice atload"zpcdreplay" atclone"./zplug.zsh" atpull"%atclone"
+zinit light g-plane/pnpm-shell-completion
 
 # Add in better Vi-mode
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode

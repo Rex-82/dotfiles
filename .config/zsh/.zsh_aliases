@@ -2,6 +2,9 @@
 alias l='eza -alg --group-directories-first'
 alias ll='eza -balgo --group-directories-first --total-size'
 
+# Go up one level
+alias ..='cd ..'
+
 # Grep colors
 alias grep='grep --color=auto'
 

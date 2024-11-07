@@ -5,6 +5,7 @@
 (defsrc
   a s d f
   j k l ;
+  f1 f2
 )
 
 (defvar
@@ -22,9 +23,19 @@
   k-mod (tap-hold $tap-time $hold-time k rshift)
   l-mod (tap-hold $tap-time $hold-time l ralt)
   ;-mod (tap-hold $tap-time $hold-time ; rmet)
+
+  clean-layer (tap-hold $tap-time $hold-time f2 (layer-switch clean))
+  base-layer (tap-hold $tap-time $hold-time f1 (layer-switch base))
 )
 
 (deflayer base
   @a-mod @s-mod @d-mod @f-mod
   @j-mod @k-mod @l-mod @;-mod
+  @base-layer @clean-layer
+)
+
+(deflayer clean
+  a r s t
+  n e i o
+  @base-layer @clean-layer
 )

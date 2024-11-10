@@ -55,6 +55,9 @@ alias cl='clear'
 alias explain='gh copilot explain'
 alias suggest='gh copilot suggest'
 
+# yarn
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/.yarnrc"'
+
 # pnpm
 alias pn='pnpm'
 alias pnr='pnpm run'

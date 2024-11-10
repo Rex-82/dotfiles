@@ -13,8 +13,8 @@
 
 /* Shrink sidebar until hovered */
 :root {
-  --thin-tab-width: 1.9rem;
-  --wide-tab-width: 20vw;
+  --thin-tab-width: 55px;
+  --wide-tab-width: calc(20vw + 55px);
 }
 #sidebar-box:not(
     [sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]

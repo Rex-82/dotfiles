@@ -48,6 +48,9 @@ alias lg='lazygit'
 # quit alias
 alias :q='exit'
 
+# lock the screen
+alias ulock='qdbus6 org.kde.screensaver /ScreenSaver Lock'
+
 # clear screen alias
 alias cl='clear'
 

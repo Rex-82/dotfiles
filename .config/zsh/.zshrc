@@ -28,9 +28,14 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit ice lucid wait'0'
-zinit light joshskidmore/zsh-fzf-history-search
+# zinit light joshskidmore/zsh-fzf-history-search
 zinit ice atload"zpcdreplay" atclone"./zplug.zsh" atpull"%atclone"
 zinit light g-plane/pnpm-shell-completion
+zinit ice as"command" from"gh-r" bpick"atuin-*.tar.gz" mv"atuin*/atuin -> atuin" \
+    atclone"./atuin init zsh > init.zsh; ./atuin gen-completions --shell zsh > _atuin" \
+    atpull"%atclone" src"init.zsh"
+zinit light atuinsh/atuin
+zinit load atuinsh/atuin
 
 # Add in better Vi-mode
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
@@ -40,10 +45,7 @@ zinit snippet OMZP::git
 zinit snippet OMZP::nvm
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
-zinit snippet OMZP::aws
-# zinit snippet OMZP::keychain
-# zinit snippet OMZP::kubectl
-# zinit snippet OMZP::kubectx
+zinit snippet OMZP::ng/_ng
 zinit snippet OMZP::command-not-found
 
 # Load completions
@@ -56,8 +58,8 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 
 # Keybindings
 # bindkey -v
-bindkey '^[^k' history-search-backward
-bindkey '^[^j' history-search-forward
+bindkey '^[^k' atuin-search
+bindkey '^[^j' atuin-up-search
 bindkey '^[^l' autosuggest-accept
 # bindkey '^[w' kill-region
 

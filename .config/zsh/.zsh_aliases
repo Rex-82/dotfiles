@@ -13,7 +13,7 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | gr
 
 # nvim shorthand
 alias v='NVIM_APPNAME=nvim-config/${NVIM_CONFIG:-"nvim"} nvim'
-alias v='NVIM_APPNAME=nvim-config/${NVIM_CONFIG:-"nvim"} neovide --fork'
+alias vide='NVIM_APPNAME=nvim-config/${NVIM_CONFIG:-"nvim"} neovide --fork'
 alias vrust='NVIM_APPNAME=nvim-config/nvim-rust v'
 
 # Edit zsh config

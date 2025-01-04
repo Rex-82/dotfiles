@@ -12,11 +12,9 @@ alias grep='grep --color=auto'
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | grep -E ^/dev/ | sort"
 
 # nvim shorthand
-alias v='nvim'
-alias vim='neovide --fork'
-
-# Enable sudo aliases
-alias sudo='sudo '
+alias v='NVIM_APPNAME=nvim-config/${NVIM_CONFIG:-"nvim"} nvim'
+alias v='NVIM_APPNAME=nvim-config/${NVIM_CONFIG:-"nvim"} neovide --fork'
+alias vrust='NVIM_APPNAME=nvim-config/nvim-rust v'
 
 # Edit zsh config
 alias zshconfig='v ~/.config/zsh/.zshrc'

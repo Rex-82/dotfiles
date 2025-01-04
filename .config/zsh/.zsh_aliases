@@ -64,3 +64,6 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/.yarnrc"'
 # pnpm
 alias pn='pnpm'
 alias pnr='pnpm run'
+
+#zellij
+alias zj='zellij'

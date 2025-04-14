@@ -1,1 +1,1 @@
-export PATH=/home/simone/.local/share/pnpm:/home/simone/.local/share/zinit/plugins/atuinsh---atuin:/home/simone/.config/nvm/versions/node/v20.12.2/bin:/home/simone/.local/bin/go/bin:/usr/local/bin:/home/simone/.local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export PATH=/home/simone/.local/share/pnpm:/home/simone/.local/share/zinit/plugins/atuinsh---atuin:/home/simone/.local/bin/go/bin:/usr/local/bin:/home/simone/.local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/home/simone/.local/share/cargo/bin:/usr/bin/core_perl

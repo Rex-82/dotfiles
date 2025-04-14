@@ -5,7 +5,8 @@
 (defsrc
   a s d f
   j k l ;
-  f1 f2
+  caps ret
+  f1 f2 f3
 )
 
 (defvar
@@ -18,24 +19,35 @@
   s-mod (tap-hold $tap-time $hold-time s lalt)
   d-mod (tap-hold $tap-time $hold-time d lshift)
   f-mod (tap-hold $tap-time $hold-time f lctrl)
+  caps-mod (tap-hold $tap-time $hold-time caps esc)
 
   j-mod (tap-hold $tap-time $hold-time j rctrl)
   k-mod (tap-hold $tap-time $hold-time k rshift)
   l-mod (tap-hold $tap-time $hold-time l ralt)
   ;-mod (tap-hold $tap-time $hold-time ; rmet)
 
-  clean-layer (tap-hold $tap-time $hold-time f2 (layer-switch clean))
   base-layer (tap-hold $tap-time $hold-time f1 (layer-switch base))
+  clean-layer (tap-hold $tap-time $hold-time f2 (layer-switch clean))
+  sofle-layer (tap-hold $tap-time $hold-time f3 (layer-switch sofle))
 )
 
 (deflayer base
   @a-mod @s-mod @d-mod @f-mod
   @j-mod @k-mod @l-mod @;-mod
-  @base-layer @clean-layer
+  @caps-mod XX
+  @base-layer @clean-layer @sofle-layer
+)
+
+(deflayer sofle
+  @a-mod @s-mod @d-mod @f-mod
+  @j-mod @k-mod @l-mod @;-mod
+  _ _
+  @base-layer @clean-layer @sofle-layer
 )
 
 (deflayer clean
-  a r s t
-  n e i o
-  @base-layer @clean-layer
+  a s d f
+  j k l ;
+  caps ret
+  @base-layer @clean-layer @sofle-layer
 )

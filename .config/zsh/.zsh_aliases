@@ -43,6 +43,9 @@ alias 'rm dir'='rmdirtrash'
 # lazygit shortcut
 alias lg='lazygit'
 
+# lazydocker shortcut
+alias lk='lazydocker'
+
 # quit alias
 alias :q='exit'
 

@@ -10,6 +10,7 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 export ZDOTDIR=$HOME/.config/zsh
 export ZSH=$ZDOTDIR/ohmyzsh
 export HISTFILE=$XDG_STATE_HOME/zsh/history
+export ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
 
 # Go
 export GOPATH=$XDG_DATA_HOME/go/src

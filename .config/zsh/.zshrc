@@ -42,7 +42,6 @@ zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
 
 # Add in snippets
 zinit snippet OMZP::git
-zinit snippet OMZP::nvm
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::ng/_ng
@@ -102,3 +101,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# fnm - https://github.com/Schniz/fnm
+source "$HOME/.config/zsh/fnm"
+eval "$(fnm env --use-on-cd --shell zsh)"

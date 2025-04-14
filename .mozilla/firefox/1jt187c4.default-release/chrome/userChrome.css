@@ -49,21 +49,21 @@
 }
 
 /* === auto-hide the horizontal tab bar when the sidebar is active === */
-#main-window #titlebar {
+#main-window .toolbar-items {
   overflow: hidden;
   transition: height 0.3s 0.3s !important;
 }
 
 /* Default state: Set initial height to enable animation */
-/* #main-window #titlebar { height: 3em !important; } */
-#main-window[uidensity="touch"] #titlebar {
+/* #main-window #TabsToolbar { height: 3em !important; } */
+#main-window[uidensity="touch"] .toolbar-items {
   height: 3.35em !important;
 }
-#main-window[uidensity="compact"] #titlebar {
+#main-window[uidensity="compact"] .toolbar-items {
   height: 2.7em !important;
 }
 /* Hidden state: Hide native tabs strip */
-#main-window[titlepreface*="XXX"] #titlebar {
+#main-window[titlepreface*="XXX"] .toolbar-items {
   height: 0 !important;
 }
 /* Hidden state: Fix z-index of active pinned tabs */
@@ -71,14 +71,15 @@
   z-index: 0 !important;
 }
 /* Move main content to the right of sidebar if not fullscreen */
-#main-window[titlepreface*="XXX"]:not([sizemode="fullscreen"])
-  #tabbrowser-tabbox {
+#main-window[titlepreface*="XXX"] #tabbrowser-tabbox {
   margin-left: var(--thin-tab-width) !important;
 }
-/* hide sidebar if window is in fullscreen */
+
+/* hide sidebar if window is in fullscreen
 #main-window[sizemode="fullscreen"] #sidebar-box {
   display: none;
 }
+*/
 
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
   #sidebar-main {
